@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-11">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="lib" path="C:/Users/user/Documents/자바풀스택/자바/차시/10차시/lib/NJ.jar"/>
+	<classpathentry kind="lib" path="C:/Users/user/Documents/자바풀스택/자바/차시/10차시/lib/twoSum.jar"/>
+	<classpathentry kind="lib" path="C:/Users/user/Documents/자바풀스택/자바/차시/10차시/lib/MM3.jar"/>
+	<classpathentry kind="lib" path="C:/Users/user/Documents/자바풀스택/자바/차시/10차시/lib/길드가입신청서.jar"/>
+	<classpathentry kind="lib" path="C:/Users/user/Documents/자바풀스택/자바/차시/10차시/lib/JH_library/JH_library/JH_Ex.jar"/>
+	<classpathentry kind="lib" path="C:/Users/user/Documents/자바풀스택/자바/차시/10차시/lib/병진_스마트스토어(수정)/병진_스마트스토어/스토어.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
