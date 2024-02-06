@@ -4,7 +4,7 @@ package day11.클래스샘플;
 public class car_test {
 
 	public static void main(String[] args) {
-		car c = new car();
+		Car c = new Car();
 		
 		c.print();
 		

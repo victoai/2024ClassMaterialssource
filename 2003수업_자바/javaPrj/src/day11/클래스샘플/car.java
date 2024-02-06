@@ -1,6 +1,6 @@
 package day11.클래스샘플;
 
-public class car {
+public class Car {
 	
 	//속성
 	private String name;
