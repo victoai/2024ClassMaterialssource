@@ -4,7 +4,7 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 
-public class FileEx2 {
+public class FileEx01 {
 	 
 
 	public static void main(String[] args) {
@@ -32,6 +32,9 @@ public class FileEx2 {
 				if ( su  ==  -1) break;
 				System.out.print( (char) su);			
 			}
+			
+			
+			fis.close();
 			
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block

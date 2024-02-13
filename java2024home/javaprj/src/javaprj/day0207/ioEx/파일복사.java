@@ -7,13 +7,13 @@ public class 파일복사 {
     	// String sourceFilePath = "res/다운로드.jpg"; // 원본 파일 경로
          // String targetFilePath = "res/복사본파일이미지.jpg"; // 복사본 파일 경로
           
-          String sourceFilePath = "c:\\acorn\\a.txt"; // 원본 파일 경로
-           String targetFilePath = "c:\\acorn\\복사본파일.txt"; // 복사본 파일 경로
+           String sourceFilePath = "c:\\acorn\\a.txt"; // 원본 파일 경로   절대경로표시할 수 있음
+           String targetFilePath = "c:\\acorn\\복사본파일2.txt"; // 복사본 파일 경로
 
 
 
-        try (InputStream inputStream = new FileInputStream(sourceFilePath);
-             OutputStream outputStream = new FileOutputStream(targetFilePath)) {
+        try (FileInputStream inputStream = new FileInputStream(sourceFilePath);
+        		FileOutputStream outputStream = new FileOutputStream(targetFilePath)) {
 
             // 파일 복사
             int data;

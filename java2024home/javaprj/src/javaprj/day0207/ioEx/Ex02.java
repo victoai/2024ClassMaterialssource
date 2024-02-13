@@ -14,8 +14,7 @@ public class Ex02 {
 		
 		//기반스트림(실제로 데이타를 읽고 쓰고 하는 기능)
 		//보조스트림(부가기능)
-		
-		//바이트스트림
+		 
 		try {
 			int su = System.in.read();
 			System.out.println(  su);

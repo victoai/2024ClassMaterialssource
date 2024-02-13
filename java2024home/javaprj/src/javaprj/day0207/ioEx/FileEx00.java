@@ -4,7 +4,7 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 
-public class FileEx {
+public class FileEx00 {
 
 	public static void main(String[] args) {
 	 
@@ -14,8 +14,11 @@ public class FileEx {
 			int data1=fis.read();
 			System.out.println( (char)data1);
 			
-			 data1=fis.read();
+			data1=fis.read();
 			System.out.println( (char)data1);
+			
+			
+			fis.close();
 			
 			
 		} catch (FileNotFoundException e) {

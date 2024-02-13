@@ -1,22 +1,22 @@
 package javaprj.day0207.ioEx;
 
+import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 
-public class FileEx3 {
+public class FileEx04 {
 
-	public static void main(String[] args) {
-
-		// 파일에서 문자 단위로 읽기
-		FileReader fis;
-
+	public static void main(String[] args) {		
 		try {
-			fis = new FileReader("res/acorn2.txt");
-			int data = fis.read();
-
-			System.out.println((char) data);
-
+			BufferedReader bf = new BufferedReader( new FileReader("res/acorn.txt"));			
+			while(true) {
+				String data = bf.readLine();
+				if( data == null)break;
+				System.out.println( data);
+			}			
+			
+			bf.close();
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -24,7 +24,9 @@ public class FileEx3 {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-
+		 
+		
+		
 	}
 
 }

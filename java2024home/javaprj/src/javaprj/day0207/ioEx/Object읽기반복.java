@@ -9,30 +9,23 @@ import java.io.ObjectInputStream;
 public class Object읽기반복 {
 
 	public static void main(String[] args) {
-		 ObjectInputStream ois=null;
-		 try {
+		ObjectInputStream ois = null;
+		try {
 			ois = new ObjectInputStream(new FileInputStream("scoreList.txt"));
-			/* Score data = (Score) ois.readObject();
-			System.out.println( data);			
-			data = (Score) ois.readObject();
-			System.out.println( data);			
-			data = (Score) ois.readObject();
-			System.out.println( data);	
-			 data = (Score) ois.readObject();
-			 System.out.println( data);			
-			 */			
-			//while			
-		       try {
-				while( true) {				 
-					Score  data= (Score) ois.readObject();
+
+			// while
+			try {
+				while (true) {
+					Score data = (Score) ois.readObject();
 					System.out.println("객체정보 " + data);
 				}
-		      }catch(EOFException e) {
-		    	  System.out.println(" 다 읽었음");
-		      }
-			  System.out.println(" 프로그램 정상 종료");
+			} catch (EOFException e) {
+				System.out.println(" 다 읽었음");
+			}
+			System.out.println(" 프로그램 정상 종료");
 			
-			
+			ois.close();
+
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

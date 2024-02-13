@@ -5,7 +5,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.ObjectOutputStream;
 
-public class FileEx7 {
+public class FileEx07 {
 
 	public static void main(String[] args) {
 	 

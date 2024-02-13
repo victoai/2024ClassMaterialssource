@@ -5,7 +5,7 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 
-public class FileEx5 {
+public class FileEx05 {
 
 	public static void main(String[] args) {
 	 
@@ -26,6 +26,9 @@ public class FileEx5 {
 			}	
 			avg =sum/count;
 			System.out.println( avg);
+			
+			
+			bf.close();
 			
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block

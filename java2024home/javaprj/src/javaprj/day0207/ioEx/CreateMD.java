@@ -3,7 +3,7 @@ import java.io.File;
 
 public class CreateMD {
     public static void main(String[] args) {
-        String directoryPath = "C:\\acorn\\aa\\"; // 생성할 폴더 경로
+        String directoryPath = "C:\\acorn\\aa\\"; //  window기준  \\ (역슬러쉬 2번) 생성할 폴더 경로
 
         // 폴더 생성
         File directory = new File(directoryPath);

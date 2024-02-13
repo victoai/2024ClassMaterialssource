@@ -2,10 +2,10 @@ package javaprj.day0207.ioEx;
 
 import java.io.IOException;
 
-public class 키보드연속 {
+public class Ex0201 {
+  public static void main(String[] args) {
 
-	public static void main(String[] args) {		 
-		
+		//한바이트씩 계속 읽음 
 		while( true) {
 			
 			try {
@@ -20,6 +20,5 @@ public class 키보드연속 {
 			}
 		}
 
-	}
-
+}
 }
