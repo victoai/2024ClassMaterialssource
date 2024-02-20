@@ -2,7 +2,7 @@ package javaprj.day0128;
 
 import java.util.*;
 
-public class Main {
+public class DfsMain {
 
     private static void dfs(int[][] graph, boolean[] visited, int vertex) {
         visited[vertex] = true;
