@@ -1,0 +1,23 @@
+  node js 다운로드 
+
+
+https://nodejs.org/en/download
+
+LTS 버전 다운로드 
+
+설치파일 -> tools폴더 이동
+더블클릭 -> 설치마법사   동의->클릭  -> Auto.. install 체크 부분 클릭  -> complete  -> finish
+
+##############
+ node 설치확인
+ cmd창 실행
+ node -v 
+ node 버전확인 
+
+
+#############
+ npm 설치확인
+ npm -v
+
+
+
