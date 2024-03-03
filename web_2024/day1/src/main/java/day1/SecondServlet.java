@@ -1,8 +1,10 @@
-package w01;
+package day1;
 
 import java.io.IOException;
+import java.io.PrintWriter;
 
 import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -16,13 +18,15 @@ import javax.servlet.http.HttpServletResponse;
 //3. 응답할 내용을  service에 오버라이딩 해야 하다
 
 
-
-public class FirstServlet   extends HttpServlet{
+@WebServlet("/second")
+public class SecondServlet   extends HttpServlet{
 
 	@Override
 	protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		 
-		System.out.println("서버가 응답합니다.");
+	 	
+		//클라이언트에게 보내질 출력스트림을 얻어온다
+		
+		PrintWriter out  = resp.getWriter();		
+		out.println("hi servlet");
 	}
 }

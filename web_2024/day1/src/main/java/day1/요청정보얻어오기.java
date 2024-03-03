@@ -1,4 +1,4 @@
-package w01;
+package day1;
 
 import java.io.IOException;
 
@@ -14,6 +14,14 @@ public class 요청정보얻어오기  extends HttpServlet{
 	@Override
 	protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 	 
+		//서버는 클라이언트의 정보를 얻어올 수 있다.
+		//#####################################
+		//클라이언트가 보낸 요청정보를 얻어올 수 있다
+		//클라이언트가 무엇을 요청했는지 서버가 무엇을 응답해야 하는지 알아야 한다 !!!
+		//주문정보를 달라는건가?
+		//게시판 정보를 달라는건가?
+		
+		
 		   
 		  //프로토콜 
 		 String scheme =   req.getScheme() ;		 

@@ -4652,7 +4652,7 @@
 	</welcome-file-list>
 	<servlet>
 		<servlet-name>first</servlet-name>
-		<servlet-class>w01.FirstServlet</servlet-class>
+		<servlet-class>day1.FirstServlet</servlet-class>
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>first</servlet-name>

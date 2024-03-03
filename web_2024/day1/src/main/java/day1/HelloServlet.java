@@ -1,4 +1,4 @@
-package w01;
+package day1;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -32,7 +32,8 @@ public class HelloServlet  extends HttpServlet{
 		 //한글을 위해서 utf-8지정함 
 		 // 주의사항은  보내는 스트림을 얻어오기전에 설정해야함 !
 		 
-		 resp.setContentType("text/html;charset=utf-8");
+		 resp.setCharacterEncoding("utf-8");              // 서바가 데이터를 보내는 인코딩의 형식 지정함 
+		 resp.setContentType("text/html;charset=utf-8");  // 서버가 보내는 문서의형식과 인코딩 방식의 정보 제공함
 		 
 		 //응답을 보내기 위한 스트림 얻어오기		 
 		 PrintWriter out  =  resp.getWriter();

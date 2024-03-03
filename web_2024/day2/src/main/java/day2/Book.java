@@ -1,4 +1,4 @@
-package w01;
+package day2;
 
 public class Book{
 	 String title;
