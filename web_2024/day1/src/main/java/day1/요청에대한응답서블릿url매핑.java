@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 
 //서블릿으로 등록함, 서블릿 이름 정의 :  이 이름을  클라이언트가   요청함
 @WebServlet("/mapping")
-public class 요청에대한응답서블릿매핑  extends HttpServlet{
+public class 요청에대한응답서블릿url매핑  extends HttpServlet{
 	
 	
 	 

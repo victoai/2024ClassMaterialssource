@@ -12,7 +12,6 @@
 
 
 	<h2>객체정보 제공하기</h2>
-
 	<%
 	Book book = new Book("김진명", "떠돌이 을불  고구려1", 14420);	 
 	out.println(book.toString());
