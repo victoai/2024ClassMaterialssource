@@ -17,7 +17,25 @@ String path =  request.getContextPath();   //현재 프로젝트의 이름 얻�
  <link href="<%=path%>/css/team.css" rel="stylesheet">
 <style>
 
+  .team{
   
+  width:300px;  
+  border:1px solid black;
+  padding:30px;
+  color: blue;
+  box-sizing:border-box;
+  margin:10px;
+  
+  }
+  
+  .inner{
+  width:150px;
+ 
+  border:1px solid black;
+  margin:0 auto;
+  padding:20px;
+  box-sizing:border-box;
+  }
 
 
 </style> 
@@ -36,14 +54,22 @@ HashMap<Integer, HashSet<String >>   map  =(HashMap<Integer, HashSet<String >>  
 <h2>^^같은 조 된거 축하합니다!!^^</h2>
 <div class="show">
 
-  <%  for(int i=1; i<= map.size() ;i++){	  
+  <%   int count=1;
+       for(int i=1; i<= map.size() ;i++){	  
 		  HashSet<String> set  = map.get(i);		  
 		  Iterator<String>  team= set.iterator();
+   %>
+        <div class="team"> 
+           <div class="inner"> 
+   <%    out.println( count + "조  <br>");
 		  while( team.hasNext()){
-			  out.println( team.next());
-		  } 
-		  
-		  out.println("<br>");
+			  out.println( team.next()  +"<br>");
+		  }  
+		  count++;
+  %> 
+       </div>
+  	</div>	 
+  <%
      }
 %>
 </div>
