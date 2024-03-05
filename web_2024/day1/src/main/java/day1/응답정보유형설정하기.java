@@ -27,6 +27,7 @@ public class 응답정보유형설정하기  extends HttpServlet{
 		 
 		 //서버가 보내는 데이터 타입 mime 이라고 한다.
 		 
+		 //두 개의 차이를 경험하자 !!! 
 		 //resp.setContentType("text/plain;charset=utf-8");
 		 resp.setContentType("text/html;charset=utf-8");
 		 
