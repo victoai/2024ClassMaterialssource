@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        function Snack(name, price) {
+            this.name = name;
+            this.price = price;
+        }
+
+        let snack = new Snack("맛동산", 3800);
+
+        let snacks = [
+            new Snack("맛동산", 3800),
+            new Snack("다이제", 2500),
+            new Snack("칸쵸", 1200),
+            new Snack("츄파춥스", 1500),
+            new Snack("오감자", 1700),
+            new Snack("콘칲", 2000),
+            new Snack("허니버터칩", 2800),
+            new Snack("빼빼로", 1000),
+            new Snack("아몬드빼빼로", 1500),
+            new Snack("죠리퐁", 2200)
+        ];
+
+        console.group("과자정보");
+        console.log(snack.name);
+        console.log(snack.price);
+        console.groupEnd();
+    </script>
+</body>
+</html>

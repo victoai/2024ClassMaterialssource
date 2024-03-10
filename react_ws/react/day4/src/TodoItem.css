@@ -1,5 +1,6 @@
 .TodoItem{
     display: flex;  
+    /* 수직 가운데*/
     align-items: center;
     padding: 10px;
     border-bottom : 1px solid black;
