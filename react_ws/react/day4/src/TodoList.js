@@ -13,7 +13,7 @@ const  TodoList = ( {todo , onDelete , onUpdate}) =>{
     }
 
     const getSearchResult = () =>{
-        return search===""?todo : todo.filter(it => it.content.includes(search));
+        return search===""?todo : todo.filter( (it) => it.content.includes(search));
     };
 
     return (
