@@ -59,7 +59,8 @@
 
         .todoItem{
             display: flex;
-            margin-bottom: 5px;
+            align-items: center;
+            margin-bottom: 10px;
             
         }
 
@@ -127,63 +128,41 @@
 
 
 <script>
- 
+         
+  const todoList = [
+            { isdone:true, title: "첫 번째 일정", date: "2024-03-12" },
+            {  isdone:true, title: "두 번째 일정", date: "2024-03-13" },
+          
+    ];
+
+   
+        
  document.getElementById("regBtn").addEventListener("click",   function(){    
-    alert("dfdfdfd"); 
+   
  
         let itemWrap = document.querySelector(".todoItemWrap");
         let inputText = document.querySelector(".todoEditWrap input").value;
+        let currentDate = new Date().toLocaleString();
+        let isdone = false;
+
 
         if (inputText.trim()  === "") {
              alert("입력");
              return;
         }
-            // Creating new elements
-            let todoItem = document.createElement("div");
-            todoItem.classList.add("todoItem");
-
-            let checkboxCol = document.createElement("div");
-            checkboxCol.classList.add("checkbox_col");
-            checkboxCol.innerHTML = '<input type="checkbox" >';
-
-            let titleCol = document.createElement("div");
-            titleCol.classList.add("title_col");
-            titleCol.textContent = inputText;
-
-            let dateCol = document.createElement("div");
-            dateCol.classList.add("date_col");
-            // You might want to add a date here if needed.
-
-            let btnCol = document.createElement("div");
-            btnCol.classList.add("btn_col");
-            btnCol.innerHTML = '<button>삭제</button>';
-
-            // Appending elements to the todoItem
-            todoItem.appendChild(checkboxCol);
-            todoItem.appendChild(titleCol);
-            todoItem.appendChild(dateCol);
-            todoItem.appendChild(btnCol);
-
-            // Appending the todoItem to the todoItemWrap
-            itemWrap.appendChild(todoItem);
-
-            // Clearing the input field after adding a todo
-            document.querySelector(".todoEditWrap input").value = "";
- 
+          
+        todoList.push( {isdone:isdone, title: inputText ,  date:currentDate});
+        initTodoList();
         });
 
-           // 초기 할 일 목록 데이터(JSON 형식)
-           const initialTodoList = [
-            { isdone:true, title: "첫 번째 일정", date: "2024-03-12" },
-            {  isdone:true, title: "두 번째 일정", date: "2024-03-13" },
-            // 필요에 따라 더 많은 일정을 추가할 수 있습니다.
-        ];
+    
 
         // 초기 데이터를 기반으로 할 일 목록 초기화 함수
-        function initializeTodoList() {
+        function initTodoList() {
             let itemWrap = document.querySelector(".todoItemWrap");
+            itemWrap.innerHTML="";
 
-            initialTodoList.forEach((todo , index) => {
+            todoList.forEach((todo , index) => {
                 let todoItem = document.createElement("div");
                 todoItem.classList.add("todoItem");
 
@@ -192,8 +171,13 @@
                 
                 let checkbox = document.createElement("input");
                 checkbox.type = "checkbox";
-                checkbox.checked = todo.isdone; // Set checkbox state based on 'isdone'
+                checkbox.checked = todo.isdone; //
+                checkbox.addEventListener("change", function() {
+                    // Update the 'isdone' property when the checkbox state changes
+                    updateIsDone(index, checkbox.checked);
+                });  
                 checkboxCol.appendChild(checkbox);
+                
 
                 let titleCol = document.createElement("div");
                 titleCol.classList.add("title_col");
@@ -219,17 +203,23 @@
         }
 
         
+        function updateIsDone(index, isChecked) {
+             alert( isChecked);
+             todoList[index].isdone = isChecked;
+
+
+             console.log( todoList);
+        }
         document.getElementById("regBtn").addEventListener("click", function () {
             // 할 일 추가 로직은 그대로 유지됩니다. (기존 코드 참조)
         });
 
         // 폼이 로드될 때 초기 데이터로 할 일 목록 초기화
-        window.addEventListener("load", initializeTodoList);
+        window.addEventListener("load", initTodoList);
 
         function delItem(index) {
-            let itemWrap = document.querySelector(".todoItemWrap");
-            let todoItem = itemWrap.children[index];
-            todoItem.remove();
+            todoList.splice(index,1) ;
+            initTodoList();
         }
 </script>
 

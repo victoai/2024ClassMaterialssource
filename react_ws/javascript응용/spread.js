@@ -6,6 +6,7 @@ const fruitAll = [...fruitOne, ...fruitTwo  ];
 console.log(fruitAll); // ['apple', 'banana', 'grape', 'peach']
 
 
+
 const Score = {
     userName:"홍",
     age :20

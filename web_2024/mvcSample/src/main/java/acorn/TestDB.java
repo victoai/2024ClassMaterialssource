@@ -9,7 +9,7 @@ import java.sql.SQLException;
 
 public class TestDB {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws SQLException {
 		String driver="oracle.jdbc.driver.OracleDriver";
 		String url="jdbc:oracle:thin:@localhost:1521:xe";
 		String user="scott";
@@ -38,31 +38,16 @@ public class TestDB {
 			e.printStackTrace();			
 		}finally {  // 자원반납  예외가발생하든 하지않든 모두 수행  , 역순으로 close
 		
-			if(rs!=null )
-				try {
+			 
 					rs.close();
-				} catch (SQLException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-				}
-			if(pst != null) {
-				try {
+			 
 					pst.close();
-				} catch (SQLException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-				}
-			}
-			
-			if( con!= null) {
-				try {
+				 
+			 
 					con.close();
-				} catch (SQLException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-				}
+				 
 			}
-		}
+		 
 		
 		
 
