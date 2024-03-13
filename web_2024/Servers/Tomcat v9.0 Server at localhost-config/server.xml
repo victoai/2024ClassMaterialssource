@@ -160,7 +160,7 @@
              Note: The pattern used is equivalent to using pattern="common" -->
         <Valve className="org.apache.catalina.valves.AccessLogValve" directory="logs" pattern="%h %l %u %t &quot;%r&quot; %s %b" prefix="localhost_access_log" suffix=".txt"/>
 
-      <Context docBase="prj" path="/prj" reloadable="true" source="org.eclipse.jst.jee.server:prj"/><Context docBase="day1" path="/day1" reloadable="true" source="org.eclipse.jst.jee.server:day1"/><Context docBase="day2" path="/day2" reloadable="true" source="org.eclipse.jst.jee.server:day2"/><Context docBase="team" path="/team" reloadable="true" source="org.eclipse.jst.jee.server:team"/><Context docBase="day3" path="/day3" reloadable="true" source="org.eclipse.jst.jee.server:day3"/><Context docBase="day4" path="/day4" reloadable="true" source="org.eclipse.jst.jee.server:day4"/><Context docBase="ssadaPrj" path="/ssadaPrj" reloadable="true" source="org.eclipse.jst.jee.server:ssadaPrj"/><Context docBase="mvcSample" path="/mvcSample" reloadable="true" source="org.eclipse.jst.jee.server:mvcSample"/><Context docBase="sessionPrj" path="/sessionPrj" reloadable="true" source="org.eclipse.jst.jee.server:sessionPrj"/><Context docBase="sessionSample" path="/sessionSample" reloadable="true" source="org.eclipse.jst.jee.server:sessionSample"/><Context docBase="DAOSample" path="/DAOSample" reloadable="true" source="org.eclipse.jst.jee.server:DAOSample"/></Host>
+      <Context docBase="day8" path="/day8" reloadable="true" source="org.eclipse.jst.jee.server:day8"/></Host>
     </Engine>
   </Service>
 </Server>
