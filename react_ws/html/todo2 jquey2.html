@@ -127,7 +127,7 @@
                     <div class="checkbox_col"> <input type="checkbox"  /></div>
                     <div class="title_col">   </div>
                     <div class="date_col"> </div>
-                    <div  class="btn_col" ><button>삭제</button></div>
+                    <div  class="btn_col" ><button class="delBtn">삭제</button></div>
                 </div>
             </div>
        </div>
@@ -140,6 +140,11 @@
 
 
 <script>
+             
+    
+
+
+
     $(document).ready(function () {
 
          let currentDate =  new Date().toLocaleString();
@@ -167,7 +172,7 @@
                     <div class="checkbox_col"> <input type="checkbox"  /></div>
                     <div class="title_col" >  ${inputText} </div>
                     <div class="date_col">  ${currentDate }</div>
-                    <div  class="btn_col" ><button>삭제</button></div>
+                    <div  class="btn_col" ><button class="delBtn" >삭제</button></div>
                 </div>`;
 
             
@@ -177,6 +182,14 @@
             //초기화
             $(".todoEditWrap input").val("");
         });
+ 
+
+
+        $(".todoItemWrap").on("click", ".delBtn", function() {
+              $(this).closest(".todoItem").remove();       
+        });
+          
+
     });
 </script>
 
