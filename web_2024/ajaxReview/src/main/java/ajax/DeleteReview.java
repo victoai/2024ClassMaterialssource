@@ -14,7 +14,7 @@ import javax.servlet.http.HttpServletResponse;
 public class DeleteReview  extends HttpServlet {
 	
 	@Override
-	protected void doDelete(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		PrintWriter out  = response.getWriter(); 		
 		
 		String id  =request.getParameter("id") ;	  
