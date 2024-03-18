@@ -15,7 +15,7 @@
  <h2> 1~10까지 출력하기</h2> 
  
 <c:forEach var="cnt" begin="1" end="10">
-	<c:out value="${cnt}"/><br/> 	
+	 ${cnt}
 </c:forEach> 
 
 </body>

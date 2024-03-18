@@ -16,6 +16,8 @@
 
 <p> c:set 변수선언시  pageContext 저장소에 저장해 줌 </p>
 <c:set var="kor" value="90" />
+
+
 <c:if test="${kor ==90 }"> 점수가 좋네요 !</c:if>
 
 
