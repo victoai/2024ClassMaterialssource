@@ -9,8 +9,7 @@ const Content4 = () => {
       <section>
         <p>This is the main content of my app.</p>
         <h2>   {objA.a}</h2>
-        <h2>   {objA.b}</h2>
-  
+        <h2>   {objA.b}</h2>  
       </section>
     );
   }

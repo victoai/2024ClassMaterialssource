@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <style>
+        header{
+            height: 60px;
+            background-color: aqua;
+            position: fixed;
+            width: 100%;
+        }
+ 
+
+        .btn{
+            width: 30px;
+            height: 30px;
+            border:1px solid black;
+
+            position:absolute;
+           
+            left: 0px;
+        }
+
+
+        header .hidden{
+            
+            /*height: 0;*/
+            display: none;
+            background-color: rgb(54, 15, 108);
+            margin-top: 50px;
+            height: 500px;
+
+             transition: 1s;
+            
+        }
+
+
+        .visual{
+            height: 1600px;
+            background-color: rgb(119, 255, 0);
+        }
+    </style>
+
+
+<script>
+
+
+    let toggle=0;
+    function a(){
+
+        if(toggle==0){
+       let  hidden=  document.querySelector(".hidden");
+       hidden.style.display="block";
+      // hidden.style.height="500px";
+       toggle=1;
+        }else{
+            let  hidden=  document.querySelector(".hidden");
+       hidden.style.display="none";
+      // hidden.style.height="0";
+       toggle=0;
+        }
+    }
+
+    
+
+
+</script>
+</head>
+<body>
+
+    <div>
+
+        <header>
+           <div class="btn"  onclick="a()">클릭</div>  !!!!!   ~~~~~~~~~~~~~~~~~~!!!!!!!!!!!
+
+           <div class="hidden">
+            hidden
+          </div>
+        </header>
+
+ 
+        <div class="visual">
+
+            fdfdfdfdf
+        </div>
+    </div>
+    
+</body>
+</html>
