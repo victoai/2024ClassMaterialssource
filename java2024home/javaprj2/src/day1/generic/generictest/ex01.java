@@ -8,8 +8,7 @@ public class ex01 {
 	 
 		
 		//ArrayList< Fruit>  list = new ArrayList< Fruit>();
-		ArrayList< ? extends Fruit>  list = new ArrayList< Apple>();
-		
+		ArrayList< ? extends Fruit>  list = new ArrayList< Apple>();		
 		ArrayList<Fruit> list2 = new ArrayList<>();
 		
 

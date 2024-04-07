@@ -17,7 +17,7 @@ public class MyGenericMethod1 {
 		
         boolean resultBool = MyGenericMethod1.pick(true, false);
         String resultStr = MyGenericMethod1.pick("짜장", "짬뽕");	 
-        double resultDbl = MyGenericMethod1.pick(45.12, 50.90);
+        double resultDbl = MyGenericMethod1.pick(3.5, 6.5);
         
         
         System.out.println( resultBool);
