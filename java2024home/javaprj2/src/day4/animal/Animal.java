@@ -1,5 +1,4 @@
-package day3.reflect.animal;
-
+package day4.animal;
 
 public class Animal {	
 	public void bark() {  

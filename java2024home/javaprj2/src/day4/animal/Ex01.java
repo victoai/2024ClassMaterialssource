@@ -1,9 +1,11 @@
-package day3.reflect.animal;
+package day4.animal;
 
 public class Ex01 {
 
 	public static void main(String[] args) {
-		 
+	
+		
+		
 	//	Cat cat = new Cat();
    //   cat.bark();
 		Dog dog  = new Dog();

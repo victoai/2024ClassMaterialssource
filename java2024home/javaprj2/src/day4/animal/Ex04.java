@@ -1,6 +1,7 @@
-package day3.reflect.animal;
+package day4.animal;
 
 import java.io.FileNotFoundException;
+
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.Properties;
@@ -18,7 +19,7 @@ public class Ex04 {
 	}		
 	public static Animal getAnimal() throws FileNotFoundException, IOException, ClassNotFoundException, InstantiationException, IllegalAccessException  {
 		Properties  p = new Properties();
-		p.load(new FileReader("src/java2/reflect/animal/config.txt"));
+		p.load(new FileReader("src/java2/day4/변경이유리한코드/animal/config.txt"));
 		Class clazz =Class.forName( p.getProperty("animal"));
 		Animal animal =(Animal)clazz.newInstance();
 		return animal;
