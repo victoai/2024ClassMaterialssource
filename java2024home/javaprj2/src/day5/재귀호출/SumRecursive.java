@@ -11,7 +11,7 @@ public class SumRecursive {
     
     private static int tenSum(int n) {
         if (n==1) {
-            // 기저 조건: start와 end가 같으면 해당 값이 합의 결과
+            // 종료조건 : start와 end가 같으면 해당 값이 합의 결과
             return 1;
         } else {
             // start부터 end까지의 합은 start부터 end-1까지의 합에 end를 더한 값과 같음

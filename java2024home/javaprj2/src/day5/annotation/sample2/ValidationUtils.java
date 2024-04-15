@@ -27,7 +27,7 @@ public class ValidationUtils {
                 Object value = field.get(obj);  //객체정보 제공 => 필드 정보 얻어오기
 
                 if (value != null && value instanceof String) {
-                    int expectedValue = annotation.length();        //애너테이션에 설정한 값
+                    int expectedValue = annotation.length();        //애너테이션에 설정한 값 얻어오기
                     String fieldValue = (String) value;             //실제 변수값
 
                       
