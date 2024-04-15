@@ -9,11 +9,12 @@ import java.util.List;
 public class Main {
 	
 	
-	public static void main(String[] args) {		 
+	public static void main(String[] args) {	
+		
 		Introduction[] objsToVerify = {
                 new Introduction(
                         "한효주", 36, "배우",
-                        "무빙 , 독전, 뷰티인사이드" , WeekDay.MON ),
+                        "무빙 , 독전, 뷰티인사이드" , WeekDay.THE ),
                 new Introduction(
                         "울트라", 4, "책",
                         "울트라러닝 ****** 세계 0.1%가 지식을 얻는 방법   2020년 출간"  , WeekDay.MON),             
@@ -57,15 +58,16 @@ public class Main {
         
 
         for (Field f : objClass.getDeclaredFields()) {
-            f.setAccessible(true);
+            f.setAccessible(true);  //private도 외부에서 접근가능하게 함 
 
-            Object val = f.get(obj);
+            Object val = f.get(obj);  //객체로 부터 f필드명에 해당하는 값얻어오기
            
             for (Annotation a : f.getAnnotations()) {
                 //  첫 글자 외 *으로
                 if (a instanceof Blind) {
-                    var s = (String) val;
+                    String s = (String) val;
                     f.set(obj, s.substring(0, 1) + "*".repeat(s.length() - 1));
+                    //변수의 값을 변화시킴
                 }
 
                 //  최대 길이 검증
@@ -82,10 +84,10 @@ public class Main {
                 //  가용 요일 검증
                 if (a instanceof WeekDaysAvail) {
                 	WeekDaysAvail wda = (WeekDaysAvail) a;
-                    WeekDay wd = (WeekDay) f.get(obj);
-                    WeekDay[] availables = wda.value();
-                    var available = false;
-                    for (var inAvail : availables) {
+                    WeekDay wd = (WeekDay) f.get(obj);  //요일 값 얻어오기
+                    WeekDay[] availables = wda.value(); // 쉴수 있는 정보 얻어오기
+                    boolean available = false;
+                    for (WeekDay inAvail : availables) {
                         if (wd == inAvail) available = true;
                     }
                     if (!available) throw new Exception(
@@ -95,6 +97,7 @@ public class Main {
         }
 
         //  테스트해야 할 메소드 실행
+        //  모든 매서드 확인
         for ( Method   m : objClass.getDeclaredMethods()) {
             for (Annotation a : m.getAnnotations()) {
                 if (a instanceof TestAndPrint) {
@@ -104,7 +107,10 @@ public class Main {
 
                     if (!printBefore.isBlank())
                         System.out.println(printBefore);
+                    
+                    //매소드 호출
                     m.invoke(obj);
+                    
                     if (!printAfter.isBlank())
                         System.out.println(printAfter);
                 }

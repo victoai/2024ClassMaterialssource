@@ -4,9 +4,8 @@ import java.lang.reflect.Field;
 
 public class ValidationUtils {	
 	public static void main(String[] args) throws IllegalAccessException {		
-		 MyEx  myex = new MyEx(3,4);		
-		필드검증하기( myex);
-		
+		FruitStore  fruitStore = new FruitStore(3,4);		  // 실제값은 3, 4개씩 적용됨
+		필드검증하기( fruitStore);		
 	}
 
 	                
@@ -19,22 +18,27 @@ public class ValidationUtils {
         Field[] fields = clazz.getDeclaredFields();
 
         for (Field field : fields) {
-        	//field에 대한 애너테이션정보 얻어오기
+        	//field에 대해 Count 애너테이션정보 얻어오기
             Count annotation = field.getAnnotation(Count.class);
 
+            //field에 애너테이션이 있으면 
             if (annotation != null) {
                 field.setAccessible(true);  // private 이어도 접근가능하도록 한다
-                Object value = field.get(obj);  //객체정보 제공 => 필드의 값얻어오기
+                int value = (int) field.get(obj);  //객체정보 제공 => 필드의 값얻어오기
+                
+ 
+          
+                int expectedValue = annotation.value();   //애너테이션에 설정한 값
+                System.out.println(  field.getName() + "기대수량:" +expectedValue);
+                int fieldValue =  value;             //실제 변수값
 
-                if (value != null && value instanceof Integer) {
-                    int expectedValue = annotation.value();   //애너테이션에 설정한 값
-                    int fieldValue = (int) value;             //실제 변수값
-
-                    if (fieldValue != expectedValue) {
-                        throw new IllegalArgumentException(
-                                  field.getName() + "항목은  "+ expectedValue+ " 값이어야 해 !! " );
-                    }
+                if (fieldValue != expectedValue) {
+                    throw new IllegalArgumentException(
+                              field.getName() + "항목은  "+ expectedValue+ " 값이어야 해 !! " );
+                    
+                    
                 }
+                 
             }
         }
     }

@@ -14,7 +14,7 @@ public class Introduction {
     @MaxLength(200)  // 200
     private String description;
     
-    @WeekDaysAvail( { WeekDay.MON  ,  WeekDay.WED  , WeekDay.FRI})     //쉴수 있는 요일 목록
+    @WeekDaysAvail( { WeekDay.MON  ,  WeekDay.WED  , WeekDay.FRI})     //쉴 수 있는 요일 목록
     private WeekDay day;
     
 

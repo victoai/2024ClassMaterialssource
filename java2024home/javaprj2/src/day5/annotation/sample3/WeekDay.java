@@ -15,5 +15,7 @@ public enum WeekDay {
 	String getName() {
 		return name;
 	}
+	 
 	
+	//멤버변수 , 생성자_매개변수있는 ,  getter 필요
 }

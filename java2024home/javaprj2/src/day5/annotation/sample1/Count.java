@@ -5,6 +5,6 @@ import java.lang.annotation.RetentionPolicy;
 
  @Retention( RetentionPolicy.RUNTIME)
 public @interface Count {	
-	 int value() default 1;   // 값이 하나일때는   value  사용한다     어노테이션객체.value()
+	 int value() default 1;   //     어노테이션객체.value()로 애너테이션의 값을 얻어 올 수 있다
 }
 
