@@ -1,0 +1,32 @@
+
+.App{
+  width:600px;
+  padding: 30px;
+  border:1px solid black;  
+  margin: 0  auto; 
+  font-family: "Jua", sans-serif;
+  font-weight: 400;
+  font-style: normal; 
+} 
+
+table{
+  width:500px;
+  border:1px solid black;
+  border-collapse:collapse;
+}
+
+td{
+  border:1px solid black;
+}
+thead{
+  background-color:skyblue;
+}
+
+td{
+  padding: 10px;
+}
+
+thead td{    
+  text-align: center;
+  font-weight: bold;
+}

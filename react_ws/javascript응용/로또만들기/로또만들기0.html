@@ -24,16 +24,21 @@
         /*
         1. 로또번호생성하기(6개)
         2. 로또공 추가하기
-         ( 반복)
-        - 공을 생성한다
-        - 스타일을 추가한다
-        - 로또번호를 표시한다
-        - 부모영역에 추가한다
+            ( 반복)
+            - 공을 생성한다
+            - 스타일을 추가한다
+            - 로또번호를 표시한다
+            - 부모영역에 추가한다
         3. 종료
         */
-        function createLotto(){          
-            let lotto_wrap = document.getElementById("lotto_wrap");           
-            lotto_wrap.innerHTML="";             
+       
+        function createLotto(){    
+            
+            let lotto_wrap = document.getElementById("lotto_wrap");         
+            
+            //lotto 영역 초기화하기
+            lotto_wrap.innerHTML="";     
+
              //1.로또번호 생성하기  8,12,37,44,3,7          
              let lottoNumbers = getLottoNumbers();   // let lottoNumbers = [8,12,37,44,3,7];
              alert( lottoNumbers); 
@@ -46,6 +51,8 @@
                 lotto_wrap.appendChild( ball);
              }            
         }
+
+
 
         // 기능: 로또번호숫자6개 생성하기
          function getLottoNumbers(){

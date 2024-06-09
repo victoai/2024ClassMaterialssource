@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tooltip Example</title>
+<style>
+    /* 툴팁 스타일 */
+    .tooltip {
+        position: relative;
+        display: inline-block;
+        cursor: pointer;
+        margin-top:100px;
+    }
+
+    .tooltip .tooltiptext {
+     
+        visibility: hidden;
+        width: 120px;
+        background-color: #000;
+        color: #fff;
+        text-align: center;
+        border-radius: 6px;
+        padding: 5px 0;
+        position: absolute;
+        z-index: 1;
+        bottom: 125%;
+        left: 50%;
+        margin-left: -60px;
+        opacity: 0;
+        transition: opacity 0.3s;
+    }
+
+    .tooltip:hover .tooltiptext {
+        visibility: visible;
+        opacity: 1;
+    }
+</style>
+</head>
+<body>
+
+<div class="tooltip">마우스를 올려보세요
+  <span class="tooltiptext">이 부분은 툴팁입니다.</span>
+</div>
+
+</body>
+</html>

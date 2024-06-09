@@ -1,0 +1,125 @@
+
+.App{
+  width:600px;
+  padding: 30px;
+  border:1px solid black;  
+  margin: 0  auto;
+ 
+  font-family: "Jua", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+ 
+ 
+} 
+table{
+  width:500px;
+  border:1px solid black;
+  border-collapse:collapse;
+}
+td{
+  border:1px solid black;
+}
+thead{
+  background-color:skyblue;
+}
+
+td{
+  padding: 10px;
+}
+
+thead td{    
+  text-align: center;
+  font-weight: bold;
+}
+
+
+/*  About*/
+
+.About{
+  border:1px solid black;
+}
+
+
+.About-wrap{
+  display: flex;
+}
+
+
+.About  .ImgCol{
+  flex:1;
+  border:1px solid black;  
+}
+
+
+.About  .Content{
+  padding: 5px;
+  flex:4;
+  border:1px solid black;
+  font-size: 12px;
+}
+
+
+
+img{
+  width: 200px;
+}
+
+
+/**/
+
+
+
+.Education{
+  border:1px solid black;
+}
+
+
+.Education  table{
+  width: 100%;
+}
+
+
+/**/
+
+.Experience{
+
+  border:1px solid black;
+}
+
+
+/**/
+
+
+
+
+.Gallery{
+  border: 1px solid rgb(178, 33, 33);
+  height: 350px; 
+  position: relative;
+} 
+
+
+
+.Gallery  .preBtn{
+  position: absolute;
+  top:150px;
+  left: 0px;
+
+
+}
+
+
+.Gallery   .nextBtn{
+  position: absolute;
+  right: 0px;
+  top:150px;
+}
+
+
+
+.Gallery  img{
+  width: 100%;
+  height: 350px;
+}
+
+
